@@ -5,8 +5,16 @@ Your solutions should use the map and filter functions,
 and not for loops or list comprehensions.
 '''
 
+
 def evens(n):
-    '''
+    xs = map(lambda x: x, range(n+1))
+    xs = list(xs)
+    return xs
+
+
+'''
+
+
     Returns a list of even numbers from 0 to n inclusive.
 
     >>> evens(10)
@@ -23,8 +31,13 @@ def evens(n):
 
 
 def threes(n):
-    '''
-    Returns a list of all numbers from 0 to n inclusive that contain the digit 3.
+    xs = filter(lambda x: '3' in str(x), range(0, n+1))
+    xs = list(xs)
+    return xs
+
+
+'''
+Returns a list of all numbers from 0 to n inclusive that contain the digit 3.
 
     >>> threes(2)
     []
@@ -40,8 +53,15 @@ def threes(n):
 
 
 def small_words(text):
-    '''
-    Returns a list of all words in the input text that are less than 5 characters long.
+    fourwords = text.split()
+    xs = filter(lambda words: len(words) <= 5, fourwords)
+    xs = list(xs)
+    return xs
+
+
+'''
+Returns a list of all words in the input text that are less than 5 characte
+rs long.
 
     HINT:
     Recall that text.split() converts the text variable into a list of words.
@@ -58,7 +78,12 @@ def small_words(text):
 
 
 def squares(n):
-    '''
+    xs = map(lambda x: x**2, range(1, n+1))
+    xs = list(xs)
+    return xs
+
+
+'''
     Returns a list of all square number between 1 and n inclusive.
     Recall that the nth square number is defined to be n*n.
 
@@ -74,8 +99,14 @@ def squares(n):
 
 
 def lengths(strings):
-    '''
-    Given a list of strings, returns a list of the lengths of the corresponding strings.
+    xs = map(len, strings)
+    xs = list(xs)
+    return xs
+
+
+'''
+Given a list of strings, returns a list of the lengths of the corresponding
+strings.
 
     >>> lengths([])
     []
